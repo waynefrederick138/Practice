@@ -11,8 +11,8 @@ shooterName = '';
 
  shootersGroup: IShooter[] = [
   { shooterId: 1, shooterName: 'Joe Jack', shooterScore: 22, shooterRun() { return(this.shooterName); } },
-  { shooterId: 2, shooterName: 'Shawn Watkins', shooterScore: 33, shooterRun() { return this.shooterScore * 2; } },
-  { shooterId: 3, shooterName: 'Justin Watkins', shooterScore: 99, shooterRun() { return this.shooterScore * 3; } }
+  { shooterId: 2, shooterName: 'Kevin Mitnick', shooterScore: 33, shooterRun() { return this.shooterScore * 2; } },
+  { shooterId: 3, shooterName: 'Michael Grubbs', shooterScore: 99, shooterRun() { return this.shooterScore * 3; } }
 ];
 
 
