@@ -1,0 +1,30 @@
+<br />
+<mat-card>
+<button mat-button [matMenuTriggerFor]="aboveMenu" >A260</button>
+<mat-menu #aboveMenu="matMenu" yPosition="above">
+</mat-menu>
+
+
+<button mat-button [matMenuTriggerFor]="belowMenu">A363</button>
+<mat-menu #belowMenu="matMenu" yPosition="below">
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="beforeMenu">AA49</button>
+<mat-menu #beforeMenu="matMenu" xPosition="before">
+</mat-menu>
+<br /> 
+
+</mat-card>
+
+
+<br />
+<img [src]='ammoUrl' [width]='imageWidth'>
+<button mat-raised-button (click)='presentAmmoData()'>
+{{ showDetails ? 'Hide' :'Show' }} Details 
+</button>
+<br /> <br />  
+<mat-card class="details" *ngIf='showDetails'>
+{{ nineMmDetails }}
+
+
+</mat-card>

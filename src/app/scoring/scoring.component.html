@@ -1,0 +1,39 @@
+<br />
+<mat-card>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input [(ngModel)]='shooterName' matInput placeholder="Shooter" name="firstName" >
+      
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Score"></textarea>
+    </mat-form-field>
+  </form>
+  
+    <button mat-raised-button color="primary">Ok</button>
+
+
+
+<table>
+  <th>Id</th>
+  <th>name</th>
+<tr *ngFor="let score of shootersGroup">
+   <td>{{ score.shooterId }}</td> 
+   <td>{{ score.shooterName | convertToSpaces: 'i' }}</td>
+   <td>{{ score.shooterScore  }}</td>
+   <td>{{ score.shooterRun() }}</td>
+</tr>
+
+  <th>Id</th>
+  <th>name</th>
+  <th>score</th>
+<tr *ngFor='let shooter of shooters'>
+  <td>{{ shooter.shooterId }}</td>
+  <td>{{ shooter.name}}</td>
+  <td>{{ shooter.score}}</td>
+  </tr>
+</table>
+
+
+</mat-card>
