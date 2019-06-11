@@ -1,39 +1,38 @@
-<br />
-<mat-card>
+<br /> 
+<div class="main-div">
+  <mat-card center>
 <form class="example-form">
     <mat-form-field class="example-full-width">
-      <input [(ngModel)]='shooterName' matInput placeholder="Shooter" name="firstName" >
-      
+      <input matInput [(ngModel)]='command' placeholder="Ship/Station" name="command" >
     </mat-form-field>
-  
     <mat-form-field class="example-full-width">
-      <textarea matInput placeholder="Score"></textarea>
+      <input matInput [(ngModel)]='division'  placeholder="Division/Activity" name="division" >
+    </mat-form-field>
+  <mat-form-field>
+  <select matNativeControl [(ngModel)]='weaponsFired'  id="weaponsfired" name="weaponsfired" required>
+    <option value="" disabled="" selected="">Weapons</option>
+    <option value="9MM">9MM</option>
+    <option value="M16">M16</option>
+    <option value="M500">M500</option>
+    <option value="9MM:M16">9MM, M16</option>
+    <option value="9MM:M500">9MM, M500</option>
+    <option value="M16:M500">M16, M500</option>
+    <option value="9MM:M16:M500">9MM, M16, M500</option>
+    <option value="M240">M240</option>
+    <option value="9MM:M16:M240">9MM, M16, M240</option>
+  </select>
+ </mat-form-field> 
+    <mat-form-field class="example-full-width">
+        <input matInput  [(ngModel)]='range' placeholder="Range Name" name="rangeName">
+   </mat-form-field>  
+    <mat-form-field class="example-full-width"  name="">
+      <input matInput type="date" >
+ </mat-form-field> 
+    <mat-form-field class="example-full-width">
+  <input matInput [(ngModel)]='email'  placeholder="Email" name="email">
     </mat-form-field>
   </form>
-  
-    <button mat-raised-button color="primary">Ok</button>
-
-
-
-<table>
-  <th>Id</th>
-  <th>name</th>
-<tr *ngFor="let score of shootersGroup">
-   <td>{{ score.shooterId }}</td> 
-   <td>{{ score.shooterName | convertToSpaces: 'i' }}</td>
-   <td>{{ score.shooterScore  }}</td>
-   <td>{{ score.shooterRun() }}</td>
-</tr>
-
-  <th>Id</th>
-  <th>name</th>
-  <th>score</th>
-<tr *ngFor='let shooter of shooters'>
-  <td>{{ shooter.shooterId }}</td>
-  <td>{{ shooter.name}}</td>
-  <td>{{ shooter.score}}</td>
-  </tr>
-</table>
-
-
+  <button mat-raised-button color="primary" routerLink="/record-scores" >Next</button>
 </mat-card>
+
+</div>

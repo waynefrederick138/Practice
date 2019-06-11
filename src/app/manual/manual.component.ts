@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-manual',
@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./manual.component.scss']
 })
 export class ManualComponent implements OnInit {
+term = 'black powder';
 
-searchTerm = '';
 sentences: any[] = [
   { line: "Explosives used to burst a forged steel projectile would be unsuitable as a propelling charge for ejecting and propelling projectiles." },
   { line: "Similarly, the explosives used in initiators, such as in primers and fuzes, are so sensitive to shock that only small quantities can be used safely." },
@@ -196,9 +196,18 @@ sentences: any[] = [
 { line: "In the water-drying process, the powder is seasoned in tanks of warm water to remove volatile solvents, followed by a brief period of air drying" } 
   ];
   
+
+@ViewChild('pubSearchBox') nameField: ElementRef;
+editName(): void {
+  this.nameField.nativeElement.focus();
+}
+
+  
   constructor() { }
 
   ngOnInit() {
+    this.nameField.nativeElement.focus();
+    this.editName();
   }
 
 }

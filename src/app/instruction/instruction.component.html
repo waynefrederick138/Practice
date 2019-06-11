@@ -1,0 +1,192 @@
+    
+<mat-card > 
+
+
+
+<button mat-button [matMenuTriggerFor]="belowMenu1" >Select Topic...</button>
+<mat-menu #belowMenu1="matMenu" yPosition="below">
+  <button mat-menu-item (click)="selectSection(1)" routerLink="/instruction" routerLinkActive="active" >References</button>
+  <button mat-menu-item (click)="selectSection(2)">Range Regulations</button>
+  <button mat-menu-item (click)="selectSection(3)">Dry Fire</button>
+  <button mat-menu-item (click)="selectSection(4)">Pistol Qual</button>
+  <button mat-menu-item (click)="selectSection(5)">Rifle Qual</button>
+  <button mat-menu-item (click)="selectSection(6)">Shotgun Qual</button>
+  <button mat-menu-item (click)="selectSection(7)">MG Qual</button>
+  <button mat-menu-item (click)="selectSection(8)">MG Sustainment</button>
+  <button mat-menu-item (click)="selectSection(9)">Targets</button>
+</mat-menu>
+
+
+
+
+
+
+
+
+    <section class="mat-typography">
+<div *ngIf='rangeInstructions == 1'>
+<mat-card>
+<section>
+    <h2>References</h2>    
+<p>(a) OPNAVINST 5530.14E</p>    
+<p>(b) SECNAVINST S8126.1 (NOTAL)</p>
+<p>(c) SECNAVINST 5500.29C</p>
+<p>(d) CJCSI 3121.01B</p>
+<p>(e) OPNAVINST 5530.13C</p>
+<p>(f) MILPERSMAN</p>
+<p>(g) SECNAVINST 1650.1H</p>
+<p>(h) OPNAVINST 5100.27B</p>
+<p>(i) NAVSUP P-724</p>
+<p>(j) Sections 40701 through 40733 of Title 36, United States Code</p>
+<p>(k) DoD Directive 5500.7-R, Section 3-211, Joint Ethics Regulation, 1 Aug 93</p>
+<p>(l) OPNAVINST 5102.1D</p>
+<p>(m) OPNAVINST F3100.6H (NOTAL)</p>
+<p>(n) NTRP 3-07.2.2</p>
+<p>(o) SW300-BC-SAF-010 Rev 1</p>
+<p>(p) Marine Corps Reference Publication 3-01B, Pistol Marksmanship</p>
+<p>(q) Marine Corps Reference Publication 3-01A, Rifle Marksmanship</p>
+<p>(r) Army Field Manual 3-23.35, Pistol Marksmanship</p>
+<p>(s) Army Field Manual 3-22.9, Rifle Marksmanship Encl: (1) Range Regulations</p>
+
+<h2>Enclosures</h2>
+<p>(1) Range Regulations</p>
+<p>(2) Small Arms Dry Fire Training Procedures and Guidelines</p>
+<p>(3) Qualification Criteria for Pistols</p>
+<p>(4) Qualification Criteria for Rifles</p>
+<p>(5) Qualification Criteria for Shotguns</p>
+<p>(6) Qualification Criteria for Light, Medium and Heavy Machine Gun Performance Evaluation</p>
+<p>(7) Targets</p>
+<p>(8) Sustainment Training for Category II Crew Served Weapons Operators</p>
+</section>
+</mat-card>
+</div>
+
+
+
+<div *ngIf='rangeInstructions == 2'>
+<mat-card>
+<section>
+    <p>RANGE REGULATIONS</p>
+<p>1. The firing range regulations of this enclosure shall be enforced during small arms training.</p>
+<p>2. RSO Responsibilities. The RSO shall be responsible for enforcement of proper range safety practices by all personnel on the range. The RSO shall ensure that prior to live fire, training is given that shall include the four general safety rules, range safety rules, approved ammunition, weapon conditions, EAP, operation of the weapon, remedial actions (including audible pop/reduced recoil procedures), and range orientation. The RSO shall also ensure that each shooter has the opportunity to practice presenting the weapon (from the holster in the case of pistol, or sling arms in the case of rifle or shotgun) and dry fire (to include assuming firing positions and manipulation skills necessary to operate the weapon, i.e., safety operation, magazine unload and reload, based on the COF and the weapon being used) the weapon until the shooter is reasonably comfortable and safe in performing the task. Shooters must demonstrate knowledge of the four general safety rules, weapons commands, the ability to safely present the weapon, and the ability to perform remedial actions before qualification fire. The RSO has final authority to decide, based on safety criteria, if a shooter will participate in live fire qualification. Ensure that the classroom training environment contains no live ammunition. Never mix different types of ammunition when conducting qualifications in this instruction (i.e. live, dummy, blank, or FX marking cartridges).</p>
+<p>3. General Safety Rules. These four safety rules are the foundation for responsible weapons handling. These rules must be observed at all times, whether in training or in combat.</p>
+<p>a. Rule 1: Treat every weapon as if it were loaded. This rule is intended to prevent unintentional injury to personnel or damage to property from handling or transferring possession of a weapon.</p>
+<p>b. Rule 2: Never point a weapon at anything you do not intend to shoot. This rule reinforces the importance of muzzle awareness and positive identification of the target.</p>
+<p>c. Rule 3: Keep your finger straight and off the trigger until ready to fire. This rule is intended to minimize the risk of firing the weapon negligently or prematurely. The rule also reinforces positive identification of the target.</p>
+<p>d. Rule 4: Keep weapon on “safe” until you intend to fire. This rule reinforces the use of the weapon’s safety feature (where applicable), as well as positive identification of the target.</p>
+<p>4. Weapons Commands. Weapons commands direct personnel to safely load, unload, and employ small arms. The following six commands shall be used in weapons handling and on the firing range:</p>
+<p>a. “Load”. This command is used to take a weapon from condition 4 to condition 3 (see enclosures (2) through (5) for the weapon condition codes for each weapon).</p>
+<p>b. “Make Ready”. This command is used to take a weapon from condition 3 to condition 1.</p>
+<p>c. “Fire”. This command is used to engage targets.</p>
+<p>d. “Cease Fire”. This command is used to cease target engagement.</p>
+<p>e. “Unload”. This command is used to take a weapon from condition 1 or condition 3 to condition 4.</p>
+<p>f. “Unload, Show Clear”. This command is used to require a second individual to check the weapon to verify that no ammunition is present before the weapon is put into condition 4. Note: To take a weapon from condition 4 to condition 1 the combined command is “load and make ready.”</p>
+<p>5. Range Orientation Brief. Prior to live firing the RSO shall give an orientation brief on the range and discuss the following:</p>
+<p>a. Range safety rules (see paragraph 6 of this enclosure).</p>
+<p>b. Berms.</p>
+<p>c. Downrange.</p>
+<p>d. Surface danger zone.</p>
+<p>e. Ready line.</p>
+<p>f. Firing line.</p>
+<p>g. Firing points.</p>
+<p>h. Tower or point from which the RSO shall call the range.</p>
+<p>i. Any other pertinent topic.</p>
+<p>6. Range Safety Rules</p>
+<p>a. The RSO has final authority to decide, based on safety</p>
+<p>criteria, if a shooter will participate in live fire</p>
+<p>qualification.</p>
+<p>b. General Range Safety Rules</p>
+<p>(1) Upon receipt of the weapon, the chamber should be checked to ensure it is not loaded. Before loading, check weapon for cracked or worn parts. Inspect barrel for any damage, foreign debris, or other obstructions. Check for dirt, excess oil, grease, or other problems. Check the magazine spring for tension and the magazine in general for defects.</p>
+<p>(2) Weapons shall be clear before any personnel go downrange. Weapons or ammunition shall not be handled or manipulated in any way if there is anyone downrange.</p>
+<p>(3) Never leave a firearm unattended, even for a brief period of time. Note: Benching a cleared weapon while personnel move downrage is not considered leaving a firearm unattended.</p>
+<p>(4) Except in rare instances, never discharge a firearm when running. Always stop to shoot, and only when certain of the target and path of the projectile. Always be aware of what is behind the target, and the potential impact zone. Category III and category IV courses of fire may require shooting while on the move.</p>
+<p>(5) Never load the firearm with dented cartridges, cartridges with loose bullets, or otherwise damaged rounds. Only approved ammunition acceptable for use on the range will be introduced.</p>
+<p>(6) If any unsafe condition is observed, immediately call “cease fire” or repeat the command if initiated by another shooter. Anyone may call a cease-fire on the range.</p>
+<p>(7) Hearing protection is required at all times when firearms are being discharged during training and qualification. Approved hearing protection such as sound attenuators that reduce noise levels to 84 decibels or below is required.</p>
+<p>(8) Shatterproof eye protection is required when shooting. American National Standards Institute approved glasses are required.</p>
+<p>(9) For ranges and other facilities utilizing FX marking cartridges or equivalent type cartridges for force on force training, never fire FX marking cartridges at another person unless they are wearing the proper personal protective equipment approved for Navy use.</p>
+<p>(10) After completion of live fire or whenever handling ammunition, shooters should wash their hands prior to eating in order to avoid ingestion of lead or other toxic contaminants.</p>
+<p>c. Pistol Safety Rules</p>
+<p>(1) Pistols shall be clear when not in use. The muzzle shall be pointed downrange, the safety shall be engaged (if applicable), the magazine shall be removed, and the slide shall be locked to the rear. The weapon shall be checked to ensure it is clear.</p>
+<p>(2) Do not remove pistols from the holsters until at the firing point facing the target, and only when instructed to do so.</p>
+<p>(3) Retention devices, i.e., thumb breaks, locking systems, will be used at all times during pistol courses of fire unless specifically outlined in this instruction or stated by the RSO.</p>
+<p>(4) Pistols are carried on and off the range in the holster, condition 4, or in the administrative transport.</p>
+<p>d. Rifle Safety Rules</p>
+<p>(1) Rifles shall be clear when not in use. The clear condition of a rifle is safety on, unloaded, bolt open, and magazine removed. When carrying the weapon on the range, when benching it, or receiving it from or handing it to another person, ensure the rifle is in a clear condition.</p>
+<p>(2) Rifles shall be carried on and off the range in a vertical or port arms position, and in a clear condition.</p>
+<p>(3) When loading a rifle, keep the weapon horizontal and pointed downrange.</p>
+<p>(4) On command of the RSO, the rifle shall be brought to the firing position (i.e., leveled at the target), made to condition 1, and the safety disengaged in preparation to fire.</p>
+<p>(5) After unloading a rifle, while keeping the muzzle pointed downrange, visually examine the chamber and the magazine to verify the weapon is clear.</p>
+<p>e. Shotgun Safety Rules</p>
+<p>(1) The clear condition of a shotgun is unloaded, action open, weapon on ”safe.” When carrying the weapon on the range, when benching it, or receiving it from or handing it to another person, make certain the shotgun is in a clear condition.</p>
+<p>(2) When loading a shotgun, keep the weapon horizontal and pointed downrange.</p>
+<p>(3) Shotguns shall be carried on and off the range in the vertical position or port arms position, unloaded with the breach open.</p>
+<p>(4) On command of the RSO, the shotgun shall be brought to the firing position (i.e., leveled at the target), and the weapon placed on “fire” in preparation to fire.</p>
+<p>(5) After unloading a shotgun, while keeping the muzzle pointed downrange, visually examine the chamber and the magazine to verify the weapon is clear.</p>
+<p>f. Machine Gun Safety Rules</p>
+<p>(1) Always check barrel bore and chamber before firing.</p>
+<p>(2) Check ammunition for oil or grease. Oil or grease on cartridges will produce excessive chamber pressure and can cause personal injury or death.</p>
+<p>(3) Before firing, make sure barrel is locked tightly to the receiver. If the barrel is not locked, threads in receiver could be damaged or cause personal injury.</p>
+<p>(4) For M122 tripod, when extending and locking tripod legs, be sure to slide sleeve down to lowest position and hold.</p>
+<p>(5) Always cock machine guns with palms up, with the exception of the MK-19 which must be cocked with palms down.</p>
+<p>(6) Ensure that assigned/spare barrels have been headspaced and tagged to their specific receiver. Rotate usage of barrels on their assigned weapon, typically after 200 rounds have been fired.</p>
+<p>(7) Never interchange barrel assembly or bolt assembly from one machine gun to another. Doing so may result in injury or death of personnel.</p>
+<p>(8) If a runaway gun occurs, always keep machine gun pointed downrange. Never reload a runaway machine gun until it is repaired.</p>
+<p>(9) Always use heat resistant mittens on a hot barrel. A hot barrel can cause serious burns.</p>
+<p>(10) When removing a stuck unfired cartridge, always stay clear of the muzzle. Do not allow the round to hit any hard surface or it may discharge. Dispose of live rounds per local regulations.</p>
+<p>(11) If a hot gun situation is encountered, refer to reference (n) for hot gun misfire procedures. Look up the specific procedures for the machine gun experiencing the problem. This publication is required to be present on the range during training.</p>
+<p>(12) Always unload the weapon before removing from tripod, disassembling, cleaning, inspecting, transporting, or storing. Always check the chamber/bore after unloading to be sure the weapon is clear.</p>
+<p>g. Prescreening Questions. Questions to be asked of shooters prior to commencing live fire qualification:</p>
+<p>(1) “Have you experienced any injury that would hamper your ability to safely operate the weapon?” A positive response requires further evaluation of the shooter.</p>
+<p>(2) “Have you consumed any alcohol or drugs, prescription or otherwise, within the last 24 hours which could hamper your ability to safely operate the weapon?” A positive response requires further evaluation of the shooter by the RSO. No one shall participate in small arms training if they have consumed alcohol within the previous 12 hours.</p>
+<p>h. Ready Line</p>
+<p>(1) The ready line is behind and parallel to the firing line.</p>
+<p>(2) The ready line may or may not be marked on the firing range. If there is no ready line marked, the RSO shall establish a ready line approximately 10 feet behind the firing line, depending on available space.</p>
+<p>(3) Shooters and line coaches shall initially be positioned behind the ready line. Shooters and line coaches shall not move forward of the ready line until instructed to do so by the RSO.</p>
+<p>(4) All spectators must remain behind the ready line during live fire sequences.</p>
+<p>(5) In order for all safety instructions to be clearly heard and understood by all personnel, shooters shall not talk while on the ready line or the firing line.</p>
+<p>i. Firing Line</p>
+<p>(1) All live fire shall take place at the firing line as designated in the COF.</p>
+<p>(2) Weapons shall not be handled at the firing line until specific instructions are given by the RSO to do so.</p>
+<p>(3) No one shall move downrange (forward of the firing line) unless instructed to do so by the RSO.</p>
+<p>(a) Before any personnel move downrange, all shooters shall bench or holster a clear and safe weapon, and all personnel must move to the rear of the ready line. After all personnel have moved behind the ready line and the RSO has verified the firing line is safe, the RSO may allow personnel to move downrange.</p>
+<p>(b) All personnel returning from downrange shall return to the rear of the ready line. Once all personnel have returned to the ready line, the RSO shall declare the firing line is no longer safe, and may direct line coaches and shooters to return to their firing positions.</p>
+<p>j. Remedial Actions</p>
+<p>(1) Stoppage. A stoppage is an unintentional interruption in the cycle of operation. A stoppage is normally discovered when the weapon does not fire. Proper operation, care, cleaning, and lubrication of the weapon can prevent most stoppages.</p>
+<p>(2) Immediate Action. Prompt actions taken by the crew to overcome a stoppage. Procedures are detailed in reference (o).</p>
+<p>(3) Remedial Action. Remedial action is the process of investigating the cause of the stoppage, clearing the stoppage, and returning the weapon to operation. There is no one set of procedures (i.e., immediate action) that can be performed to clear all or even most stoppages that can occur. Therefore, the stoppage must be investigated and remedial action must be performed to clear it.</p>
+<p>Audible Pop/Reduced Recoil: A dangerous situation can potentially exist if the round produces a lower than normal report (audible pop) or lower than normal recoil. This condition can also be accompanied by smoke escaping from the chamber area. An audible pop occurs when only a portion of the propellant is ignited, and could result in the projectile obstructing the bore. If this situation occurs, the slide and hammer, or bolt is in the forward position. When an audible pop or reduced recoil is experienced, under no circumstances is immediate action performed. If the chamber is reloaded and the weapon is fired again, serious injury to the shooter or surrounding personnel can occur. Whenever unsure, always wait a minimum of 3 seconds, and inspect the bore to ensure it is not obstructed. While performing immediate action, always keep the muzzle of the weapon pointed directly downrange.</p>
+<p>(4) Remedial Action Policy</p>
+<p>(a) All shooters shall perform their own remedial actions unless there is a possibility of a bore obstruction, or unless directed otherwise by the RSO. Subparagraphs 6j(4)(b) and 6j(4)(c) below provide further guidance on when remedial actions are performed.</p>
+<p>(b) For the Navy Handgun Qualification Course, Handgun Lowlight Course, and Rifle Lowlight Course, the following policy shall apply. All remedial actions shall be performed after the sequence of fire is complete. Rounds resulting from a shooter-induced stoppage are saved rounds and are lost. Rounds resulting from an ammunition or weapon-induced stoppage are alibi rounds. Shooters shall be afforded the opportunity to fire alibi rounds before the next sequence of fire begins.</p>
+<p>(c) For the Navy Handgun Practical Weapons Course (HPWC) Mobile Ranges, Rifle Qualification Course, Shotgun Practical Weapons Course, Machine gun Qualification Course Bipod, and Machine Gun Qualification Course Tripod/Traversing and Elevation (T&E) Mechanism, the following policy shall apply. If a stoppage occurs, the shooter shall perform his or her own remedial actions during the COF, but under the close supervision of the line coach. Shooters shall be allowed to recover from shooter-induced stoppages during the COF as long as the appropriate remedial action was taken. If the shooter does not finish the sequence in the allotted time, the RSO shall determine the number of saved rounds and/or alibi rounds, and provide adequate time to fire any remaining alibi rounds.</p>
+<p>(d) RSOs are responsible for all aspects of range safety. If the RSO determines a shooter is incapable of performing remedial actions, that shooter shall be referred for remedial training. Upon completion of the additional training, the RSO may allow the shooter to conduct live fire during a subsequent firing detail.</p>
+<p>(5) Remedial action procedures for each weapon are listed in reference (n).</p>
+<p>(6) In the case of an audible pop/reduced recoil incident, the shooter shall place the weapon on ”safe,” remove their finger from inside the trigger guard, raise their nonfiring hand, keep the weapon pointed safely downrange, and wait for assistance from the line coach. The weapon shall be disassembled and inspected for a bore obstruction. If there is no bore obstruction, the weapon may continue to be used. If a bore obstruction is present, the weapon shall be taken out of service and handled according to the procedures outlined in reference (n). </p>
+<p>k. Range Operations </p>
+<p>(1) All firing sequences and range commands shall be given by the RSO, or an instructor under the close supervision of the RSO.</p>
+<p>(2) Shooters must listen carefully and concentrate on instructions and commands given by the RSO.</p>
+<p>l. Range Safety Violations For Which a Shooter Shall Be Removed From the Firing Line</p>
+<p>(1) Not keeping the muzzle of the firearm pointed downrange,</p>
+<p>(2) Safety not engaged when instructed to do so,</p>
+<p>(3) Finger inside the trigger guard except when sights and muzzle are on the target,</p>
+<p>(4) Shooting at anything other than the intended target,</p>
+<p>(5) Failure to immediately respond to RSO commands,</p>
+<p>(6) Failure to follow RSO/line coach instructions,</p>
+<p>(7) Firing after the "cease fire" signal has been given, or</p>
+<p>(8) Inability to perform remedial actions as determined by the RSO.</p>
+<p>m. Medical Personnel. During live fire range operations, qualified medical personnel, such as a hospital corpsman (or other service equivalent), paramedic, emergency medical technician, nurse, or doctor must be present at the range. Medical personnel shall ensure appropriate medical supplies are present to manage, at a minimum, basic airway, breathing, and circulation problems resulting from traumatic and non-traumatic events. Medical personnel shall not participate in the live fire shoot while they are on medical duty. Medical personnel do not have to be present if emergency medical services are available on the base or host facility, and there is a regulation or standard operating procedure in place providing for emergency services and transportation.</p>
+<p>n. EAP. Before any live fire operations can take place, an EAP must be established and coordinated with any host command. This plan must include, at a minimum:</p>
+<p>(1) Location of telephones, telephone numbers, radios, radio channels/call signs (if used) of emergency medical services, fire department, police/security, and other emergency response teams as required by the firing range.</p>
+<p>(2) Identification and location of emergency devices, such as first aid kits, and other equipment determined by the location of the firing range.</p>
+<p>(3) Notification lists of personnel and the appropriate chains of command.</p>
+<p>(4) Muster sites and evacuation routes for non-affected students, line coaches, and instructors.</p>
+<p>(5) Entry routes for emergency services vehicles and personnel.</p>
+<p>(6) Dedicated evacuation vehicle on standby and emergency evacuation route, unless the base or host facility provides emergency transportation services, and there is a regulation or standard operating procedure in place for such services.</p>
+<p>o. Training Time Out (TTO)</p>
+<p>(1) A TTO may be called by anyone in any training situation where they are concerned for their own or another’s safety, or they request clarification of procedures or requirements. TTO is also an appropriate means for a person to obtain relief if he or she is experiencing pain, heat stress, or other serious physical discomfort. The purpose of the TTO is to correct the situation of concern, provide clarifying information, or remove the individual from the possible hazardous environment. A TTO may be signaled by verbally shouting “training time out” or “cease fire,” or by non-verbally raising the non-firing hand straight up from the shoulder, while keeping the weapon pointed safely downrange. If a TTO is signaled, all personnel who hear the command shall repeat it until the RSO has acknowledged the command. (Note: In lowlight situations use the verbal commands.) If the TTO is not acknowledged, the signaler shall continue to shout the verbal commands again until acknowledged. The line coach shall attempt to relieve and remove the individual from the possible hazardous environment. If an adequate number of line coaches are available to allow training to continue safely, the RSO may elect to do so. However, if this is not practical, training shall be stopped until the situation is corrected. </p>
+<p>(2) In those cases where an individual refuses to participate in training after TTO instruction has been given, he or she shall be removed from the training site and referred to higher authority for proper administrative action. It is important for the individual to understand that no disciplinary action can result from calling a TTO.</p>
+<p>7. No contents of this instruction shall prevent local range regulations or standard operating procedures from requiring more stringent range safety criteria than contained herein.</p>
+    </section>
+    </mat-card>
+</div>

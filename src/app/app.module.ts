@@ -22,6 +22,9 @@ import { AmmoComponent } from './ammo/ammo.component';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe} from './filter.pipe';
 import { ConvertToSpacesPipe } from './convertToSpaces.pipe';
+import { HomeComponent } from './home/home.component';
+import { InstructionComponent } from './instruction/instruction.component';
+import { RecordScoresComponent } from './scoring/record-scores/record-scores.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +32,10 @@ import { ConvertToSpacesPipe } from './convertToSpaces.pipe';
     ScoringComponent,
     AmmoComponent,
     FilterPipe,
-    ConvertToSpacesPipe
+    ConvertToSpacesPipe,
+    HomeComponent,
+    InstructionComponent,
+    RecordScoresComponent
   ],
   imports: [
 BrowserModule,

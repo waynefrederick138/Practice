@@ -1,42 +1,30 @@
-<mat-card *ngIf='title'  [style.backgroundColor]="'#223355'"> 
-<h1  routerLink="/" >{{ title }}</h1>
-
-<button mat-button [matMenuTriggerFor]="aboveMenu1" >Scoring</button>
-<mat-menu #aboveMenu1="matMenu" yPosition="above">
-  <button mat-menu-item routerLink="/scoring" routerLinkActive="active" routerLink="scoring">NHQC</button>
-  <button mat-menu-item>RQC</button>
-</mat-menu>
-
-<button mat-button [matMenuTriggerFor]="belowMenu1">3591</button>
-<mat-menu #belowMenu1="matMenu" yPosition="below">
-  <button mat-menu-item>Intro</button>
-  <button mat-menu-item>Safety Brief</button>
-  <button mat-menu-item>NHQC</button>
-</mat-menu>
-
-<button mat-button [matMenuTriggerFor]="belowMenu">GM Manual</button>
-<mat-menu #belowMenu="matMenu" yPosition="below">
-  <button mat-menu-item routerLink="/manual">Explosives</button>
-  <button mat-menu-item>Chapter 2</button>
-</mat-menu>
-
-<button mat-button [matMenuTriggerFor]="beforeMenu">Ammo</button>
-<mat-menu #beforeMenu="matMenu" xPosition="before">
-  <button mat-menu-item routerLink="/ammo">9mm</button>
-  <button mat-menu-item>M-16 </button>
-</mat-menu>
-
-<button mat-button [matMenuTriggerFor]="aboveMenu" >Range Gear</button>
-<mat-menu #aboveMenu="matMenu" yPosition="above">
-</mat-menu>
-
-
-<br /> 
-
+<mat-card>
+<div class="mainHeader">
+<h1 class="">{{ title }}</h1>
+<p>Resources for the toughest job in the Navy</p>
+</div>
 </mat-card>
 
+<br /> 
+<mat-card>
+<mat-menu #belowMenu2="matMenu" yPosition="below"></mat-menu>
+<button mat-button routerLink="/home" >Home</button>
+<mat-menu #aboveMenu1="matMenu" yPosition="below"></mat-menu>
+<button mat-button  routerLink="/scoring" >Scoring</button>
+<mat-menu #belowMenu1="matMenu" yPosition="below"></mat-menu>
+<button mat-button  routerLink="/instruction" >3591</button>
 
+<button mat-button [matMenuTriggerFor]="belowMenu" >GM Manual</button>
+<mat-menu #belowMenu="matMenu" yPosition="below">
+  <button mat-menu-item routerLink="/manual">Explosives</button>
+</mat-menu>
 
-
-
+<!-- <button mat-button  >Range Gear</button>
+<mat-menu #aboveMenu="matMenu" yPosition="above">
+</mat-menu> -->
+</mat-card>
+<br />  
 <router-outlet></router-outlet>
+<br /> 
+
+

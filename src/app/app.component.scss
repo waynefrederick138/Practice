@@ -11,13 +11,7 @@
 }
 
 .mat-card {
-  box-shadow: 2px 2px 5px black; 
-}
-/*
- * Actual Sticky Footer Styles
- */
- .all-wrap {
-  min-height: 100vh;
+  box-shadow: 2px 2px 5px white; 
 }
 
 .page-wrap {
@@ -30,4 +24,9 @@
   flex: 1;
 }
 
+.mainHeader {
+  border: 1px solid gray;
+padding-left: 20px;  
+border-radius: 5px;
 
+}

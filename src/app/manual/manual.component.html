@@ -1,15 +1,14 @@
-<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 <br />
 <mat-card> 
-<h2>Gunner's Mate</h2>
+<h2>Gunner's Mate Manual 'GM'</h2>
 <form class="example-form">
         <mat-form-field class="example-full-width">
-         Search the Pub: <input type="text" [(ngModel)]='term' matInput name="firstName" >
+         Search the Pub: <input #pubSearchBox type="text" [(ngModel)]="term" matInput name="pubSearchBox" >
         </mat-form-field>
       </form>
  <tbody>
      <tr *ngFor="let sentence of sentences | filter:'line':term">
-        <td>** {{ sentence.line }}<br /><br /></td>
+        <td>{{ sentence.line }}<br /><br /></td>
           
      </tr>
      <br />
