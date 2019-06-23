@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { LocalStorageService } from './scoresData.service';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { LocalRefExtractor } from '@angular/core/src/render3/interfaces/node';
 
 @Component({
   selector: 'app-record-scores',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecordScoresComponent implements OnInit {
 
-  constructor() { }
+shooterName = '';
+shooterScore = '';
+shooterNotes = '';
+shooterOptions = '';
+
+  constructor(private localStorageService: LocalStorageService) {
+   }
+
+
 
   ngOnInit() {
   }
+
+
+ addShooter() {
+  this.localStorageService.storeOnLocalStorage(this.shooterName, this.shooterScore, this.shooterNotes, this.shooterOptions);
+
+}
+
+
+
+
 
 }

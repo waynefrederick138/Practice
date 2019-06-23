@@ -9,7 +9,8 @@ import { Component } from '@angular/core';
 }) // no semi-colon here because it's decorating the AppComponent Class
 // The class for the view
 export class AppComponent {
-title = 'MyGunCard';
+title = '';
+miniTitle = "By GM1 (SW) Brian Watkins, USN, ret."
 }
 
 

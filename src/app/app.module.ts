@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { StorageServiceModule } from 'ngx-webstorage-service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +26,10 @@ import { ConvertToSpacesPipe } from './convertToSpaces.pipe';
 import { HomeComponent } from './home/home.component';
 import { InstructionComponent } from './instruction/instruction.component';
 import { RecordScoresComponent } from './scoring/record-scores/record-scores.component';
+import { LocalStorageService } from './scoring/record-scores/scoresData.service';
+import { LocalStorageService2 } from './scoring/scorecard.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +44,7 @@ import { RecordScoresComponent } from './scoring/record-scores/record-scores.com
   ],
   imports: [
 BrowserModule,
+StorageServiceModule,
 FormsModule,
 AppRoutingModule,
 BrowserAnimationsModule,
@@ -54,6 +60,7 @@ MatInputModule
   ],
 exports: [
 MatButtonModule,
+StorageServiceModule,
 MatCheckboxModule,
 MatMenuModule, MatCardModule,
 MatTableModule,
@@ -61,7 +68,9 @@ MatFormFieldModule,
 MatSelectModule,
 MatInputModule
 ],
-  providers: [],
+  providers: [LocalStorageService,
+    LocalStorageService2
+  ],
   bootstrap: [AppComponent]
 })
 

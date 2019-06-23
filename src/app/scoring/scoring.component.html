@@ -3,13 +3,13 @@
   <mat-card center>
 <form class="example-form">
     <mat-form-field class="example-full-width">
-      <input matInput [(ngModel)]='command' placeholder="Ship/Station" name="command" >
+      <input matInput [(ngModel)]='ship' placeholder="Ship/Station" name="ship"> 
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <input matInput [(ngModel)]='division'  placeholder="Division/Activity" name="division" >
     </mat-form-field>
   <mat-form-field>
-  <select matNativeControl [(ngModel)]='weaponsFired'  id="weaponsfired" name="weaponsfired" required>
+  <select matNativeControl [(ngModel)]='weapons'  id="weaponsfired" name="weaponsfired" required>
     <option value="" disabled="" selected="">Weapons</option>
     <option value="9MM">9MM</option>
     <option value="M16">M16</option>
@@ -26,13 +26,15 @@
         <input matInput  [(ngModel)]='range' placeholder="Range Name" name="rangeName">
    </mat-form-field>  
     <mat-form-field class="example-full-width"  name="">
-      <input matInput type="date" >
+      <input [(ngModel)]='dateOfShoot' name="dateOfShoot" matInput type="date" >
  </mat-form-field> 
     <mat-form-field class="example-full-width">
   <input matInput [(ngModel)]='email'  placeholder="Email" name="email">
     </mat-form-field>
   </form>
-  <button mat-raised-button color="primary" routerLink="/record-scores" >Next</button>
+  <button (click)="backOne()" mat-raised-button color="primary" >Back</button>
+  <button (click)="nextOne()" mat-raised-button color="primary" >Next</button>
+  <button (click)="saveGunShoot()" mat-raised-button color="primary" routerLink="/record-scores" >Save</button>
 </mat-card>
 
 </div>

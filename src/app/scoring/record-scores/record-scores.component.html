@@ -1,26 +1,29 @@
 <mat-card>
 
-
 <div class="example-container">
+<form>
     <mat-form-field>
-      <input matInput placeholder="Shooter Name">
+      <input [(ngModel)]='shooterName' name="shooterName" type="text" matInput placeholder="Shooter's Name">  
     </mat-form-field>
  <br /> 
     <mat-form-field>
-      <input matInput placeholder="Shooter's Score">
+      <input  [(ngModel)]='shooterScore' name="shooterScore" matInput placeholder="Shooter's Score">
     </mat-form-field>
  <br /> 
     <mat-form-field>
-      <textarea matInput placeholder="Notes on Shooter"></textarea>
+      <textarea [(ngModel)]='shooterNotes' name="shooterNotes" matInput placeholder="Notes on Shooter"></textarea>
     </mat-form-field>
  <br /> 
     <mat-form-field>
-      <mat-select placeholder="Select">
-        <mat-option value="option">Pulled from range</mat-option>
-        <mat-option value="option">Shooter needs coaching</mat-option>
-        <mat-option value="option">Needs one-on-one training</mat-option>
+      <mat-select [(ngModel)]='shooterOptions' name="shooterOptions" placeholder="Status">
+        <mat-option value="Pulled from range">Pulled from range</mat-option>
+        <mat-option value="Needs Coaching">Shooter needs coaching</mat-option>
+        <mat-option value="One-on-One">Needs one-on-one training</mat-option>
       </mat-select>
-    </mat-form-field>
+  </mat-form-field>
+</form>
+<button (click)="addShooter()" mat-raised-button color="primary" >Save</button>
+
   </div>
 
   
