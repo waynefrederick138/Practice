@@ -23,6 +23,14 @@ export class LocalStorageService {
           this.storage.set(STORAGE_KEY, currentTodoList);
           console.log(this.storage.get(STORAGE_KEY) || 'LocaL storage is empty');
      }
+     public retrieveShooters(): [] {
+        if (!this.storage.get(STORAGE_KEY)) {
+           console.log("Nothing in local storage.");
+           return [];
+        }
+        const shooterList = this.storage.get(STORAGE_KEY) || [];
+        return shooterList;
+    }
 }
 
 

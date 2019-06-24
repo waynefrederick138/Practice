@@ -1,16 +1,22 @@
-<br /> 
 <div class="main-div">
   <mat-card center>
+      <button *ngIf="localStorageArray.length > 1" mat-raised-button color="accent" style="float: right;">Profile {{ index + 1 }} of  {{ localStorageArray.length }}</button>
+
 <form class="example-form">
+
+
+      <label>Gun Shoot Profile (3591)</label>
+
     <mat-form-field class="example-full-width">
       <input matInput [(ngModel)]='ship' placeholder="Ship/Station" name="ship"> 
     </mat-form-field>
+
     <mat-form-field class="example-full-width">
       <input matInput [(ngModel)]='division'  placeholder="Division/Activity" name="division" >
     </mat-form-field>
   <mat-form-field>
   <select matNativeControl [(ngModel)]='weapons'  id="weaponsfired" name="weaponsfired" required>
-    <option value="" disabled="" selected="">Weapons</option>
+    <option value="" disabled="" selected="Weapons">Weapons</option>
     <option value="9MM">9MM</option>
     <option value="M16">M16</option>
     <option value="M500">M500</option>
@@ -20,21 +26,33 @@
     <option value="9MM:M16:M500">9MM, M16, M500</option>
     <option value="M240">M240</option>
     <option value="9MM:M16:M240">9MM, M16, M240</option>
+    <option value="Weapons">Weapons</option>
   </select>
  </mat-form-field> 
+
     <mat-form-field class="example-full-width">
         <input matInput  [(ngModel)]='range' placeholder="Range Name" name="rangeName">
    </mat-form-field>  
-    <mat-form-field class="example-full-width"  name="">
-      <input [(ngModel)]='dateOfShoot' name="dateOfShoot" matInput type="date" >
+
+    <mat-form-field class="example-full-width">
+      <!-- <input matInput id="dateField" [(ngModel)]="dateOfShoot" name="dateOfShoot" matInput type="date" > -->
+      <input matInput [matDatepicker]="myDatePicker" [(ngModel)]="dateOfShoot" name="dateOfShoot" >
+      <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
+      <mat-datepicker #myDatePicker></mat-datepicker> 
+
  </mat-form-field> 
     <mat-form-field class="example-full-width">
   <input matInput [(ngModel)]='email'  placeholder="Email" name="email">
     </mat-form-field>
   </form>
+  <mat-card center style="text-align: center;" >
+
+
   <button (click)="backOne()" mat-raised-button color="primary" >Back</button>
   <button (click)="nextOne()" mat-raised-button color="primary" >Next</button>
   <button (click)="saveGunShoot()" mat-raised-button color="primary" routerLink="/record-scores" >Save</button>
+  <button (click)="deleteThisShoot()" mat-raised-button color="primary" >Delete this one</button>
+  </mat-card>
 </mat-card>
 
 </div>

@@ -10,8 +10,11 @@ MatButtonModule,
 MatCheckboxModule,
 MatMenuModule,
 MatCardModule,
-MatGridListModule
+MatGridListModule,
+MatDatepickerModule,
+MatNativeDateModule
 } from '@angular/material';
+import {MatListModule, MatNavList} from '@angular/material/list';
 
 import {MatTableModule} from '@angular/material/table';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -56,7 +59,10 @@ MatGridListModule,
 MatTableModule,
 MatFormFieldModule,
 MatSelectModule,
-MatInputModule
+MatInputModule,
+MatDatepickerModule,
+MatNativeDateModule,
+MatListModule
   ],
 exports: [
 MatButtonModule,
@@ -66,7 +72,9 @@ MatMenuModule, MatCardModule,
 MatTableModule,
 MatFormFieldModule,
 MatSelectModule,
-MatInputModule
+MatInputModule,
+MatNavList
+
 ],
   providers: [LocalStorageService,
     LocalStorageService2

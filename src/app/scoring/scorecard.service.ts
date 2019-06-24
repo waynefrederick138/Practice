@@ -40,7 +40,18 @@ export class LocalStorageService2 {
          const currentGunShoot = this.storage.get(STORAGE_KEY) || [];
          return currentGunShoot;
      }
-}
+
+     public deleteShip(index): [] {
+        const currentGunShoot = this.storage.get(STORAGE_KEY);
+        currentGunShoot.splice(index, 1);
+        this.storage.set(STORAGE_KEY, currentGunShoot);
+        return currentGunShoot;
+         }
+
+    }
+
+
+
 
 
 

@@ -6,15 +6,6 @@
 .example-container > * {
   width: 100%;
 }
-.active {
-  color: #C2175B;
-}
-
-.mat-card {
-  // box-shadow: 2px 12px 15px rgb(84, 88, 212); 
-  background-color: rgb(0, 0, 0);
-  color:  red;
-}
 
 .page-wrap {
   display: flex;
@@ -23,5 +14,5 @@
 }
 
 .content {
-  flex: 1;
+  flex: 2;
 }
