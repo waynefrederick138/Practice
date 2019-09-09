@@ -31,6 +31,7 @@ import { InstructionComponent } from './instruction/instruction.component';
 import { RecordScoresComponent } from './scoring/record-scores/record-scores.component';
 import { LocalStorageService } from './scoring/record-scores/scoresData.service';
 import { LocalStorageService2 } from './scoring/scorecard.service';
+import { ShooterListComponent } from './shooter-list/shooter-list.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { LocalStorageService2 } from './scoring/scorecard.service';
     ConvertToSpacesPipe,
     HomeComponent,
     InstructionComponent,
-    RecordScoresComponent
+    RecordScoresComponent,
+    ShooterListComponent
   ],
   imports: [
 BrowserModule,

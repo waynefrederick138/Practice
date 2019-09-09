@@ -1,0 +1,12 @@
+<h2>Shooter List</h2>
+
+
+<div *ngFor="let shooter of shooters">
+    <h3>
+        <a [title]="shooter.name + ' nhqc '">
+            {{ shooter.name }} {{shooter.age}} {{shooter.nhqc}}
+                <button mat-raised-button (click)="openDialog()">Change</button>
+          </a>
+             
+        </h3>
+</div>

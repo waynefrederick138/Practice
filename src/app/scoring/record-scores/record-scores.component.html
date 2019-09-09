@@ -5,19 +5,19 @@
       <form class="example-form">
 
     <mat-form-field class="example-full-width" >
-      <input matInput [(ngModel)]='shooterName' name="shooterName" type="text" placeholder="Name">  
+      <input matInput [(ngModel)]='shooter.shooterName' name="shooterName" type="text" placeholder="Name">  
     </mat-form-field>
  <br /> 
     <mat-form-field class="example-full-width">
-      <input matInput [(ngModel)]='shooterScore' name="shooterScore" placeholder="Score">
+      <input matInput [(ngModel)]='shooter.shooterScore' name="shooterScore" placeholder="Score">
     </mat-form-field>
  <br /> 
     <mat-form-field class="example-full-width">
-      <textarea matInput [(ngModel)]='shooterNotes' name="shooterNotes"  placeholder="Notes"></textarea>
+      <textarea matInput [(ngModel)]='shooter.shooterNotes' name="shooterNotes"  placeholder="Notes"></textarea>
     </mat-form-field>
  <br /> 
     <mat-form-field class="example-full-width">
-      <mat-select [(ngModel)]='shooterOptions' name="shooterOptions" placeholder="Status">
+      <mat-select [(ngModel)]='shooter.shooterOptions' name="shooterOptions" placeholder="Status">
         <mat-option value="Pulled from range">Pulled from range</mat-option>
         <mat-option value="Needs Coaching">Shooter needs coaching</mat-option>
         <mat-option value="One-on-One">Needs one-on-one training</mat-option>
@@ -27,18 +27,17 @@
 </form>
 <button (click)="addShooter()" mat-raised-button color="primary" >Save</button>
 
-<mat-selection-list #shooters>
+<mat-selection-list #shooters [(ngModel)]="selectedOptions" (ngModelChange)="deleteSelectedOptions()">
     <mat-list-option *ngFor="let shooter of shooterList">
       {{shooter.name}} - {{shooter.score}} - {{shooter.status}}
     </mat-list-option>
   </mat-selection-list>
   
-  <!-- <p>
-    Shooters selected: {{shooters.selectedOptions.selected.length}}
-    
-  </p> -->
+  <p>
+  Shooters selected: {{ shooters.selectedOptions.selected.length   }}
+  </p>
 
 
-
+<button (click)="deleteSelectedOptions" mat-raised-button color="accent" >Delete Selected Shooters</button>
 </mat-card>
 </div>

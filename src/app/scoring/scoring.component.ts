@@ -89,6 +89,11 @@ getValues() {
     this.localStorageService2.storeOnLocalStorage(this.ship, this.division, this.weapons, this.range, this.dateOfShoot, this.email);
   }
 
+
+  selectThisGunShoot() {
+ 
+  }
+
   deleteThisShoot() {
     this.localStorageArray = this.localStorageService2.deleteShip(this.index);
     this.ngOnInit();
